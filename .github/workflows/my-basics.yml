@@ -1,9 +1,9 @@
-name: CI
+name: My-basics-CI-GitActions
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   my-testings:
