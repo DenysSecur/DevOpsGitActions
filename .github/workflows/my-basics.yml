@@ -11,11 +11,11 @@ jobs:
     
     steps:
     - name: Hello first message block from testing job
-      run: python hello_python.py
+      run: python ./hello_python.py
   
   my_depoloy:
     runs-on: ubuntu-latest
     
     steps:
     - name: Hello second message block_2 from deploy job
-      run: python hello_python.py
+      run: python ./hello_python.py
