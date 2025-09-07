@@ -1,6 +1,5 @@
 name: CI
 
-
 on:
   push:
     branches:
@@ -14,7 +13,6 @@ jobs:
     - name: Hello first message block from testing job
       run: hello_python.py
   
-
   my_depoloy:
     runs-on: ubuntu-latest
     
