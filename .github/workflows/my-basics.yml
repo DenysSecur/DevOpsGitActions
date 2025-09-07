@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Hello first message block from testing job
-      run: ./hello_python.py
+    - name: Print Hello Message 1
+      run: echo "Hello World block bild 1"
   
   my_depoloy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Hello second message block_2 from deploy job
-      run: ./hello_python.py
+    - name: Print Hello Message 2
+      run: echo "Hello World block bild 2"
