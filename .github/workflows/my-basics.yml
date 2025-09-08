@@ -1,4 +1,9 @@
 name: My-basics-CI-GitActions
+env:
+  APPLICATION_NAME   : "MyFlask"
+  DEPLOY_PACKAGE_NAME: "flaskdeploy-ver-${{github.sha}}"
+  
+
 
 on:
   push:
@@ -7,16 +12,26 @@ on:
 
 jobs:
   my-testings:
-    runs-on: ubuntu-latest
+    runs-on  : ubuntu-latest
     
     steps:
     - name: Print Hello Message 1
-      run: echo "Hello World block bild 1"
+      run : echo "Hello World block bild 1"
+
+    - name: Execure few commands
+      run: |
+        echo "Hello Message1"
+        echo "Hello Message2"
+        echo "Appication name: ${{env.APPLICATION_NAME}}"
+      
   
   my_depoloy:
-    runs-on: ubuntu-latest
-    needs: [my-testings]
+    runs-on : ubuntu-latest
+    needs   : [my-testings]
     
     steps:
     - name: Print Hello Message 2
-      run: echo "Hello World block bild 2"
+      run : echo "Hello World block bild 2"
+
+    - name: Printing Deployment package
+      run : echo "Deplyo pakcage name is ${{env.DEPLOY_PACKAGE_NAME }}"
